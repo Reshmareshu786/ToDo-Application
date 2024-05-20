@@ -1,0 +1,40 @@
+GET http://localhost:3000/todos/?status=TO%20DO
+
+GET http://localhost:3000/todos/?priority=HIGH
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+GET http://localhost:3000/todos/?search_q=Play
+
+GET http://localhost:3000/todos/24/
+
+POST http://localhost:3000/todos/
+Content-Type : application/json
+
+{
+    "id" : 24,
+    "todo" : "Complete NodeJS",
+    "priority" : "HIGH",
+    "status" : "DONE"
+}
+
+PUT http://localhost:3000/todos/2
+Content-Type : application/json
+
+{
+    "status" : "DONE"
+}
+
+PUT http://localhost:3000/todos/5
+Content-Type : application/json
+{
+    "priority" : "HIGH"
+}
+
+PUT http://localhost:3000/todos/28
+Content-Type : application/json 
+{
+    "todo" : "PLAY CHESS"
+}
+
+DELETE http://localhost:3000/todos/2
